@@ -61,4 +61,6 @@ public class Employee implements Serializable {
     @TableField(fill = FieldFill.INSERT_UPDATE) // 自动填充，插入和更新时自动填充
     private Long updateUser;
 
+    public void setCreateUser() {
+    }
 }

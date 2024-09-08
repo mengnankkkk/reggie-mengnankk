@@ -13,7 +13,7 @@ spring:
       driver-class-name: com.mysql.cj.jdbc.Driver
       # 本人将使用服务器启动项填写以下敏感信息 #
       # IDEA->Run->Edit Configurations->Environment Variables->添加以下变量 #
-      url: jdbc:mysql://localhost:3306/riggie?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+      url: jdbc:mysql://localhost:3306/reggie?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
       username: root
       password: root
 

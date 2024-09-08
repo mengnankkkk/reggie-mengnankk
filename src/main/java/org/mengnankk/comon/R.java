@@ -1,4 +1,4 @@
-package com.fubukiss.rikky.common;
+package org.mengnankk.comon;
 
 import lombok.Data;
 

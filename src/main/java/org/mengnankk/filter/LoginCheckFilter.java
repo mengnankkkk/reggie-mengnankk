@@ -2,6 +2,7 @@ package org.mengnankk.filter;
 
 import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
+import org.mengnankk.comon.R;
 import org.springframework.util.AntPathMatcher;
 
 import javax.servlet.*;
@@ -47,7 +48,7 @@ public class LoginCheckFilter implements Filter {
             filterChain.doFilter(request,response);
             return;
         }
-        response.getWriter().write(JSON.toJSONString(com.fubukiss.rikky.common.R.error("Notlogin")));
+        response.getWriter().write(JSON.toJSONString(R.error("Notlogin")));
         return;
     }
 
