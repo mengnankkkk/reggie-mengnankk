@@ -1,8 +1,8 @@
 package org.mengnankk.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.fubukiss.rikky.entity.Employee;
 import org.apache.ibatis.annotations.Mapper;
+import org.mengnankk.entity.Employee;
 
 /**
  * <p>Project: rikky-takeaway - EmployeeMapper

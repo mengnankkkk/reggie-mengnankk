@@ -1,4 +1,4 @@
-package com.fubukiss.rikky.common;
+package org.mengnankk.comon;
 
 /**
  * <p>Project: rikky-takeaway - CustomException 自定义异常类

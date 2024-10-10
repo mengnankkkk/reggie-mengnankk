@@ -1,4 +1,4 @@
-package com.fubukiss.rikky.common;
+package org.mengnankk.comon;
 
 /**
  * <p>Project: rikky-takeaway - BaseContext 基于ThreadLocal封装的工具类，用于获取当前线程的用户信息

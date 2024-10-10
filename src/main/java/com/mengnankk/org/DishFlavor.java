@@ -1,4 +1,4 @@
-package com.fubukiss.rikky.entity;
+package com.mengnankk.org;
 
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;
