@@ -1,4 +1,4 @@
-package com.mengnankk.org;
+package com.mengnankk.org.entity;
 
 import lombok.Data;
 

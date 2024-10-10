@@ -1,4 +1,4 @@
-package org.mengnankk.entity;
+package com.mengnankk.org.mengnankk.entity;
 
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;
