@@ -41,7 +41,7 @@ public class Employee implements Serializable {
     /** 员工状态：1为在职 */
     private Integer status;
 
-    /** 创建时间 */
+    /** 创建时间 *公共字段要进行加注解/
     @TableField(fill = FieldFill.INSERT) // 自动填充，插入时自动填充
     private LocalDateTime createTime;
 
