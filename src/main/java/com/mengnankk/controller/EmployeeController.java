@@ -95,7 +95,7 @@ public class EmployeeController {
         log.info("分页查询，page={}, pageSize={}, name={}", page, pageSize, name);
 
         // 分页构造器
-        Page<Employee> pageInfo = new Page<>(page, pageSize);
+        com.baomidou.mybatisplus.extension.plugins.pagination.Page<Employee> pageInfo = new Page<>(page, pageSize);
 
         // 条件构造器
         LambdaQueryWrapper<Employee> queryWrapper = new LambdaQueryWrapper<>();
