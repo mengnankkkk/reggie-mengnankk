@@ -27,9 +27,15 @@ public class CategoryController {
         LambdaQueryWrapper<Category> queryWrapper = new LambdaQueryWrapper<>();
         queryWrapper.orderByAsc(Category::getSort);
 
-        // 通过实例调用 page 方法
         categoryService.page(categoryPage, queryWrapper);
 
         return R.success(categoryPage);
+    }
+    @DeleteMapping//注意是ids哦
+    public R<String> delete(Long ids){
+        log.info("删除id为{}",ids);
+        categoryService.removeById(ids);
+        return R.success("分类信息删除成功");
+
     }
 }
