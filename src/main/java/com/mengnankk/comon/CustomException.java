@@ -1,8 +1,6 @@
 package com.mengnankk.comon;
 
 /**
- * <p>Project: rikky-takeaway - CustomException 自定义异常类
- * <p>Powered by river On 2023/01/08 8:52 PM
  *
  * @author Riverify
  * @version 1.0
