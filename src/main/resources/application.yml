@@ -54,7 +54,7 @@ mybatis-plus:
 
 
 # 其它配置信息
-rikky:
+reggie:
   # 文件存储位置信息|必填
-  linux-path: C:\Users\river\code\work\javaProjects\rikky-takeaway\img\  # 本地测试时，文件存储路径，img的绝对路径，img后需要加上斜杠
+  path: C:\Users\river\code\work\javaProjects\rikky-takeaway\img\  # 本地测试时，文件存储路径，img的绝对路径，img后需要加上斜杠
 #  windows-path: # !!!暂不使用，即使你是非linux系统，也在上方linux-path里配置存储地址
