@@ -80,6 +80,9 @@ public class CommonController {
             response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
             log.error("Error occurred during file download", e);
         }
+        finally {
+            log.info("开始下载");
+        }
     }
 
 }
