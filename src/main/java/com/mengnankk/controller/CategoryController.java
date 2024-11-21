@@ -42,7 +42,7 @@ public class CategoryController {
     }
 
     /**
-     * 根据条件查询数据
+     * 根据条件查询数据，下拉框的实现
      * @param category
      * @return
      */
@@ -57,4 +57,5 @@ public class CategoryController {
         return R.success(list);
 
     }
+
 }

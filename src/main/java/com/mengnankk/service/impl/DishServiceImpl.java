@@ -9,5 +9,6 @@ import org.springframework.stereotype.Service;
 
 @Service
 @Slf4j
-public class DishServiceImpl extends ServiceImpl<DishMapper, Dish>implements DishService {
+public class DishServiceImpl extends ServiceImpl<DishMapper, Dish> implements DishService {
+    // 这里继承了 ServiceImpl，自动提供了 save、update 等方法
 }
