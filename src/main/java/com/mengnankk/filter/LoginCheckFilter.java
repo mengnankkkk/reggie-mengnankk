@@ -33,7 +33,9 @@ public class LoginCheckFilter implements Filter {
                 "/employee/logout",
                 "/backend/**",
                 "/front/**",
-                "/common/**"
+                "/common/**",
+                "/user/sendMassage",
+                "/user/login"
         };
 
         // 检查是否需要放行
@@ -46,6 +48,11 @@ public class LoginCheckFilter implements Filter {
         }
         if(request.getSession().getAttribute("employee")!=null){
             log.info("用户已经登录{}",request.getSession().getAttribute("employee"));
+            filterChain.doFilter(request,response);
+            return;
+        }
+        if(request.getSession().getAttribute("user")!=null){
+            log.info("用户已经登录{}",request.getSession().getAttribute("user"));
             filterChain.doFilter(request,response);
             return;
         }
