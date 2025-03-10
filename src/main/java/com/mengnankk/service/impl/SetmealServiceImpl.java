@@ -3,12 +3,14 @@ package com.mengnankk.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.mengnankk.comon.CustomException;
+import com.mengnankk.dto.SetmealDto;
 import com.mengnankk.entity.Setmeal;
 import com.mengnankk.entity.SetmealDish;
 import com.mengnankk.mapper.SetmealMapper;
 import com.mengnankk.service.SetmealDishService;
 import com.mengnankk.service.SetmealService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -40,5 +42,23 @@ public class SetmealServiceImpl extends ServiceImpl<SetmealMapper, Setmeal> impl
         LambdaQueryWrapper<SetmealDish> lambdaQueryWrapper = new LambdaQueryWrapper<>();
         lambdaQueryWrapper.in(SetmealDish::getSetmealId, ids);
         setmealDishService.remove(lambdaQueryWrapper);
+    }
+
+    /**
+     * 回显套餐数据
+     */
+    @Override
+    public SetmealDto getDate(Long id){
+        Setmeal setmeal = this.getById(id);
+        SetmealDto setmealDto  = new SetmealDto();
+        LambdaQueryWrapper<SetmealDish> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.eq(id!=null,SetmealDish ::getSetmealId,id);
+        if (setmeal!=null){
+            BeanUtils.copyProperties(setmeal,setmealDto);
+            List<SetmealDish> list = setmealDishService.list(queryWrapper);
+            setmealDto.setSetmealDishes(list);
+            return setmealDto;
+        }
+        return null;
     }
 }

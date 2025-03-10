@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.lang.invoke.LambdaMetafactory;
 import java.util.List;
@@ -24,13 +25,21 @@ import java.util.Map;
 public class UserController {
     @Autowired
     private UserService  userService;
+
+    @PostMapping("/sendMsg")
     public R<String> sendMvg(@RequestBody User user, HttpSession session){
         String phone = user.getEmail();
         String code = ValidateCodeUtils.generateValidateCode(4).toString();
         log.info("code={}",code);
         return R.success("发送成功");
-
     }
+
+    /**
+     * 移动端登录
+     * @param map
+     * @param session
+     * @return
+     */
     @PostMapping("/login")
     public R<User> login(@RequestBody Map map, HttpSession session){
         log.info(map.toString());
@@ -51,5 +60,10 @@ public class UserController {
         }
         return R.error("失败");
 
+    }
+    @PostMapping("/loginout")
+    public R<String> logout(HttpServletRequest request){
+        request.removeAttribute("user");
+        return R.success("退出成功");
     }
 }
