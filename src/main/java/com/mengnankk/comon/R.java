@@ -1,6 +1,7 @@
 package com.mengnankk.comon;
 
 import lombok.Data;
+import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -62,6 +63,9 @@ public class R<T> {
         r.msg = msg;
         r.code = 0;
         return r;
+    }
+
+    public static R<Service> success(String 下单成功) {
     }
 
     public R<T> add(String key, Object value) {
